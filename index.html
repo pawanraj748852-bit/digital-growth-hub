@@ -6,6 +6,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Digital Growth Hub helps small businesses and startups grow through social media, content creation, local marketing and digital strategy.">
   <title>Digital Growth Hub | Grow Your Business</title>
+
+/* Clickable service cards */
+#services .card {
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+#services .card:hover {
+  transform: translateY(-5px);
+  border-color: #4568f5;
+  box-shadow: 0 12px 28px #4568f51c;
+}
+
+#services .card:focus-visible {
+  outline: 3px solid #4568f5;
+  outline-offset: 3px;
+}
+
+/* Service details popup */
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(10, 18, 42, .72);
+}
+
+.service-modal.is-open {
+  display: flex;
+}
+
+.service-modal-box {
+  width: min(580px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 30px;
+  border-radius: 18px;
+  background: #fff;
+  color: #202945;
+}
+
+.service-modal-box h2 {
+  margin: 10px 35px 12px 0;
+  font-size: 28px;
+}
+
+.service-modal-box p {
+  color: #66708a;
+  margin: 10px 0;
+}
+
+.service-modal-box ul {
+  padding-left: 22px;
+  margin: 14px 0 22px;
+}
+
+.service-modal-box li {
+  margin: 7px 0;
+}
+
+.service-modal-close {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  border: 0;
+  background: #eef1ff;
+  color: #101a35;
+  border-radius: 9px;
+  width: 38px;
+  height: 38px;
+  font-size: 24px;
+  cursor: pointer;} 
   <style>
     :root {
       --navy: #101a35;
@@ -18,6 +94,41 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+   
+<div class="service-modal" id="serviceModal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="serviceModalTitle">
+  <div class="service-modal-box">
+    <button class="service-modal-close" id="closeServiceModal"
+            aria-label="Close service details">&times;</button>
+    <span class="label">DIGITAL GROWTH HUB</span>
+    <h2 id="serviceModalTitle">Service Details</h2>
+    <p id="serviceModalDescription"></p>
+    <h3>What's included?</h3>
+    <ul id="serviceModalFeatures"></ul>
+    <p id="serviceModalAudience"></p>
+    <a class="btn" id="serviceModalContact" href="#contact">
+      Get Started →
+    </a>
+  </div>
+</div>  
+<div class="service-modal" id="serviceModal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="serviceModalTitle">
+  <div class="service-modal-box">
+    <button class="service-modal-close" id="closeServiceModal"
+            aria-label="Close service details">&times;</button>
+    <span class="label">DIGITAL GROWTH HUB</span>
+    <h2 id="serviceModalTitle">Service Details</h2>
+    <p id="serviceModalDescription"></p>
+    <h3>What's included?</h3>
+    <ul id="serviceModalFeatures"></ul>
+    <p id="serviceModalAudience"></p>
+    <a class="btn" id="serviceModalContact" href="#contact">
+      Get Started →
+    </a>
+  </div>
+</div>
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
