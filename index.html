@@ -1,164 +1,266 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Growth Hub | Grow Your Business Digitally</title>
-  <meta name="description" content="Digital Growth Hub helps local businesses grow through social media, content creation, Google Business and digital marketing.">
+  <meta name="description" content="Digital Growth Hub helps small businesses and startups grow through social media, content creation, local marketing and digital strategy.">
+  <title>Digital Growth Hub | Grow Your Business</title>
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#172033;background:#fff}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #e8ebf0}
-    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-size:22px;font-weight:800;letter-spacing:-.5px}
-    .brand span{color:#2563eb}
-    .nav-links{display:flex;gap:28px;font-size:15px;font-weight:600}
-    .nav-links a:hover{color:#2563eb}
-    .menu{display:none;font-size:25px;background:none;border:0}
-    .hero{padding:105px 0 90px;background:linear-gradient(135deg,#eff6ff 0%,#fff 55%,#f5f3ff 100%)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-weight:700;font-size:13px;margin-bottom:18px}
-    h1{font-size:clamp(42px,6vw,70px);line-height:1.05;letter-spacing:-2.5px;margin-bottom:22px}
-    h1 span{color:#2563eb}
-    .hero p{font-size:18px;color:#5b6578;max-width:650px;margin-bottom:30px}
-    .buttons{display:flex;gap:13px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:13px 21px;border-radius:10px;font-weight:700;border:1px solid #2563eb}
-    .primary{background:#2563eb;color:white}
-    .secondary{background:white;color:#2563eb}
-    .hero-card{background:white;border:1px solid #e3e8ef;border-radius:24px;padding:30px;box-shadow:0 20px 55px rgba(37,99,235,.12)}
-    .hero-card h3{font-size:22px;margin-bottom:15px}
-    .stat{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #edf0f4}
-    .stat:last-child{border-bottom:0}
-    .stat strong{color:#2563eb}
-    section{padding:82px 0}
-    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
-    .section-head h2{font-size:38px;letter-spacing:-1px;margin-bottom:12px}
-    .section-head p{color:#697386}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{padding:28px;border:1px solid #e5e9ef;border-radius:17px;background:#fff}
-    .icon{font-size:30px;margin-bottom:15px}
-    .card h3{margin-bottom:9px}
-    .card p{color:#697386;font-size:15px}
-    .why{background:#f8fafc}
-    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-    .why-item{background:white;border:1px solid #e6eaf0;border-radius:16px;padding:24px}
-    .why-item h3{margin-bottom:7px}
-    .why-item p{color:#697386}
-    .cta{padding:70px 0}
-    .cta-box{background:#172033;color:white;border-radius:24px;padding:55px;text-align:center}
-    .cta-box h2{font-size:38px;margin-bottom:12px}
-    .cta-box p{color:#cbd5e1;margin-bottom:25px}
-    footer{background:#0f172a;color:#cbd5e1;padding:30px 0}
-    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    footer strong{color:#fff}
-    @media(max-width:800px){
-      .nav-links{display:none}
-      .menu{display:block}
-      .hero-grid,.why-grid{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr}
-      .hero{padding:75px 0}
-      section{padding:65px 0}
-      .cta-box{padding:40px 22px}
+    :root {
+      --navy: #101a35;
+      --blue: #4568f5;
+      --light: #f5f7ff;
+      --text: #202945;
+      --muted: #66708a;
+      --white: #fff;
+      --green: #16a36a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background: white;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1120px, 91%); margin: auto; }
+    header {
+      background: rgba(255,255,255,.97);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e9ecf5;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+    }
+    .logo { font-size: 20px; font-weight: 800; color: var(--navy); }
+    .logo span { color: var(--blue); }
+    .navlinks { display: flex; align-items: center; gap: 22px; }
+    .navlinks a { font-size: 14px; font-weight: 600; }
+    .navlinks a:hover { color: var(--blue); }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 9px;
+      background: var(--blue);
+      color: white;
+      padding: 13px 21px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: .92; }
+    .btn-outline { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+    .hero {
+      background: linear-gradient(125deg,#101a35 0%,#1b2e60 62%,#344dc0 100%);
+      color: white;
+      padding: 100px 0 92px;
+      overflow: hidden;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 50px; align-items: center; }
+    .eyebrow {
+      display: inline-block; border: 1px solid #ffffff55; border-radius: 30px;
+      padding: 6px 13px; font-size: 12px; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    h1 { font-size: clamp(38px,5.2vw,64px); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 22px; }
+    .hero h1 span { color: #9fb2ff; }
+    .hero p { color: #e1e7ff; font-size: 17px; max-width: 590px; margin-bottom: 28px; }
+    .hero .btn-outline { color: white; border-color: #ffffff88; margin-left: 8px; }
+    .hero-card {
+      padding: 30px; border-radius: 22px;
+      background: #ffffff12; border: 1px solid #ffffff35;
+      backdrop-filter: blur(8px);
+    }
+    .hero-card h3 { margin-bottom: 20px; font-size: 21px; }
+    .step {
+      display: flex; gap: 13px; align-items: center;
+      padding: 13px 0; border-bottom: 1px solid #ffffff28;
+    }
+    .step:last-child { border-bottom: 0; }
+    .step-icon {
+      width: 38px; height: 38px; border-radius: 11px;
+      display: grid; place-items: center; background: #ffffff20; flex-shrink: 0;
+    }
+    .step strong { display: block; }
+    .step small { color: #d3dcff; }
+    section { padding: 82px 0; }
+    .section-head { text-align: center; max-width: 700px; margin: 0 auto 42px; }
+    .label { color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+    h2 { color: var(--navy); font-size: clamp(29px,4vw,42px); line-height: 1.2; margin: 10px 0 15px; }
+    .section-head p { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .card {
+      padding: 27px; border: 1px solid #e7eaf4; border-radius: 16px;
+      background: white; box-shadow: 0 8px 25px #1a28500a;
+    }
+    .card:hover { box-shadow: 0 15px 35px #1a285014; }
+    .service-icon {
+      width: 49px; height: 49px; border-radius: 13px; background: #edf0ff;
+      display: grid; place-items: center; font-size: 24px; margin-bottom: 18px;
+    }
+    .card h3 { color: var(--navy); font-size: 19px; margin-bottom: 9px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    .soft { background: var(--light); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about-copy p { color: var(--muted); margin: 12px 0; }
+    .checklist { list-style: none; margin-top: 22px; }
+    .checklist li { margin: 12px 0; font-weight: 600; }
+    .checklist li::before { content: "✓"; color: var(--green); font-weight: 800; margin-right: 10px; }
+    .approach { padding: 30px; border-radius: 20px; background: white; border: 1px solid #e6eaf7; }
+    .approach-row { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #e9ecf5; }
+    .approach-row:last-child { border-bottom: 0; }
+    .number { font-weight: 800; color: var(--blue); font-size: 20px; }
+    .approach-row p { color: var(--muted); font-size: 14px; }
+    .pricing { align-items: stretch; }
+    .price-card { position: relative; display: flex; flex-direction: column; }
+    .price-card.featured { border: 2px solid var(--blue); box-shadow: 0 12px 35px #4568f51c; }
+    .popular {
+      position: absolute; top: -13px; right: 20px; background: var(--blue);
+      color: white; padding: 4px 10px; border-radius: 30px; font-size: 11px; font-weight: 700;
+    }
+    .price { font-size: 39px; font-weight: 800; color: var(--navy); margin: 13px 0 0; }
+    .price small { font-size: 13px; font-weight: 500; color: var(--muted); }
+    .price-card > p { margin-bottom: 18px; }
+    .features { list-style: none; margin: 16px 0 24px; flex: 1; }
+    .features li { padding: 7px 0; color: var(--muted); font-size: 14px; }
+    .features li::before { content: "✓ "; color: var(--green); font-weight: 800; }
+    .price-card .btn { text-align: center; }
+    .note { text-align: center; color: var(--muted); font-size: 13px; margin-top: 23px; }
+    .portfolio-card {
+      border-radius: 16px; padding: 27px; background: linear-gradient(140deg,#edf0ff,#f9faff);
+      border: 1px solid #e0e6ff; min-height: 220px;
+    }
+    .portfolio-card .tag { font-size: 11px; color: var(--blue); font-weight: 800; text-transform: uppercase; }
+    .portfolio-card h3 { margin: 15px 0 8px; color: var(--navy); }
+    .portfolio-card p { font-size: 14px; color: var(--muted); }
+    .portfolio-note { margin-top: 20px; text-align: center; font-size: 13px; color: var(--muted); }
+    .cta { background: var(--navy); color: white; text-align: center; }
+    .cta h2 { color: white; }
+    .cta p { color: #d6ddf5; max-width: 650px; margin: 0 auto 25px; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 35px; }
+    .contact-info { padding: 28px; background: var(--navy); color: white; border-radius: 18px; }
+    .contact-info h3 { font-size: 24px; margin-bottom: 12px; }
+    .contact-info p { color: #d6ddf5; margin-bottom: 22px; }
+    .contact-item { margin: 18px 0; overflow-wrap: anywhere; }
+    .contact-item small { display: block; color: #aab9f3; margin-bottom: 3px; }
+    form { padding: 28px; border: 1px solid #e7eaf4; border-radius: 18px; }
+    .field { margin-bottom: 16px; }
+    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    input, select, textarea {
+      width: 100%; border: 1px solid #dce1ee; border-radius: 8px;
+      padding: 12px; font: inherit; background: white; color: var(--text);
+    }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #b9c6ff; border-color: var(--blue); }
+    textarea { min-height: 100px; resize: vertical; }
+    form .btn { width: 100%; }
+    footer { background: #0b1227; color: #c9d1eb; padding: 28px 0; font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-row strong { color: white; }
+    @media(max-width:850px) {
+      .hero-grid,.about-grid,.contact-grid { grid-template-columns: 1fr; }
+      .hero { padding: 70px 0; }
+      .hero-card { max-width: 520px; }
+      .grid { grid-template-columns: repeat(2,1fr); }
+      .navlinks { gap: 12px; }
+      .navlinks a { font-size: 12px; }
+    }
+    @media(max-width:580px) {
+      nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      .navlinks { flex-wrap: wrap; }
+      .navlinks .btn { padding: 8px 11px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
+      .hero .btn-outline { margin: 10px 0 0; }
+      .card,form,.contact-info { padding: 22px; }
     }
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="container nav-inner">
-    <a class="brand" href="#home"><span class="brand-mark">DG</span>Digital <span>Growth Hub</span></a>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="menu" aria-label="Menu">☰</button>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">Digital <span>Growth Hub</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact" class="btn">Get Started</a>
+      </div>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main id="home">
-  <section class="hero">
+<main>
+  <section class="hero" id="home">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">DIGITAL MARKETING FOR LOCAL BUSINESSES</div>
-        <h1>Grow Your Business.<br><span>Build Your Digital Presence.</span></h1>
-        <p>Digital Growth Hub helps local businesses attract customers and build a stronger online presence through social media, content, Google Business and practical digital marketing solutions.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#contact">Get Started</a>
-          <a class="btn secondary" href="#services">View Services</a>
-        </div>
+        <span class="eyebrow">Your partner in digital growth</span>
+        <h1>Turn Your Business Into a <span>Growing Brand.</span></h1>
+        <p>Practical, affordable digital marketing for local businesses, startups and entrepreneurs. Build your online presence, reach more customers and grow with confidence.</p>
+        <a class="btn" href="#contact">Let's Grow Together →</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
       </div>
       <div class="hero-card">
-        <h3>What We Help With</h3>
-        <div class="stat"><span>Social Media</span><strong>01</strong></div>
-        <div class="stat"><span>Content Creation</span><strong>02</strong></div>
-        <div class="stat"><span>Google Business</span><strong>03</strong></div>
-        <div class="stat"><span>Marketing Analytics</span><strong>04</strong></div>
+        <h3>A smarter path to growth</h3>
+        <div class="step"><div class="step-icon">01</div><div><strong>Attract</strong><small>Build visibility and reach the right audience.</small></div></div>
+        <div class="step"><div class="step-icon">02</div><div><strong>Convert</strong><small>Turn interest into customer enquiries.</small></div></div>
+        <div class="step"><div class="step-icon">03</div><div><strong>Understand</strong><small>Learn from feedback and customer needs.</small></div></div>
+        <div class="step"><div class="step-icon">04</div><div><strong>Retain</strong><small>Build trust and lasting relationships.</small></div></div>
       </div>
-    </div>
-  </section>
-
-
-  <section style="padding:28px 0;border-top:1px solid #e8ebf0;border-bottom:1px solid #e8ebf0;background:#fff">
-    <div class="container" style="display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;text-align:center">
-      <div><strong>📱 Social Media</strong><br><span style="color:#697386;font-size:14px">Build your presence</span></div>
-      <div><strong>🎨 Content</strong><br><span style="color:#697386;font-size:14px">Create better content</span></div>
-      <div><strong>📍 Local Growth</strong><br><span style="color:#697386;font-size:14px">Reach nearby customers</span></div>
-      <div><strong>📊 Analytics</strong><br><span style="color:#697386;font-size:14px">Track performance</span></div>
     </div>
   </section>
 
   <section id="services">
     <div class="container">
       <div class="section-head">
-        <div class="mini-label">What We Do</div><h2>Our Services</h2>
-        <p>Simple, practical digital marketing services designed for growing businesses.</p>
+        <span class="label">What we do</span>
+        <h2>Digital Solutions for Real Business Needs</h2>
+        <p>Simple, focused marketing support to help your business become more visible, attract customers and build a stronger digital presence.</p>
       </div>
-      <div class="cards">
-        <div class="card"><div class="icon">📱</div><h3>Social Media Management</h3><p>Instagram and Facebook content, captions, posting and basic page management.</p></div>
-        <div class="card"><div class="icon">🎨</div><h3>Content Creation</h3><p>Promotional posts, reels, offers and creative content for your business.</p></div>
-        <div class="card"><div class="icon">📍</div><h3>Google Business</h3><p>Improve your local online presence and build a better customer review system.</p></div>
-        <div class="card"><div class="icon">📊</div><h3>Marketing Analytics</h3><p>Easy-to-understand monthly reports covering reach, engagement and leads.</p></div>
-        <div class="card"><div class="icon">📝</div><h3>Customer Feedback</h3><p>Digital feedback forms and simple systems to understand your customers.</p></div>
-        <div class="card"><div class="icon">🎯</div><h3>Local Marketing</h3><p>Marketing ideas focused on helping local businesses reach nearby customers.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why" id="about">
-    <div class="container">
-      <div class="section-head">
-        <h2>Why Digital Growth Hub?</h2>
-        <p>We focus on useful marketing—not just posting content.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-item"><h3>📌 Practical Strategy</h3><p>We create simple strategies based on your business, audience and goals.</p></div>
-        <div class="why-item"><h3>📈 Trackable Results</h3><p>Monthly reporting helps you understand what content is working.</p></div>
-        <div class="why-item"><h3>🤝 Local Business Focus</h3><p>Our services are designed to be accessible for small and local businesses.</p></div>
-        <div class="why-item"><h3>💡 One Digital Partner</h3><p>Content, social media, customer feedback and local visibility in one place.</p></div>
+      <div class="grid">
+        <article class="card"><div class="service-icon">📱</div><h3>Social Media Management</h3><p>Plan and manage social media content to communicate your brand and connect with your audience.</p></article>
+        <article class="card"><div class="service-icon">✍️</div><h3>Content Creation</h3><p>Engaging post designs, captions and creative content that present your products and services clearly.</p></article>
+        <article class="card"><div class="service-icon">📍</div><h3>Google Business Support</h3><p>Improve your business profile so local customers can discover your business online.</p></article>
+        <article class="card"><div class="service-icon">🎯</div><h3>Local Digital Marketing</h3><p>Practical digital marketing ideas for shops, cafés, salons, coaching centres and local services.</p></article>
+        <article class="card"><div class="service-icon">⭐</div><h3>Customer Feedback & Reviews</h3><p>Set up feedback collection and ethical review strategies to better understand customer experiences.</p></article>
+        <article class="card"><div class="service-icon">🚀</div><h3>Startup Launch Support</h3><p>Support for brand basics, digital presence, launch planning and early customer acquisition.</p></article>
+        <article class="card"><div class="service-icon">📊</div><h3>Marketing Analytics</h3><p>Monthly reporting to review content activity, audience engagement and opportunities to improve.</p></article>
+        <article class="card"><div class="service-icon">💻</div><h3>Website & Landing Pages</h3><p>Guidance and support for a simple online presence that explains your offer and encourages enquiries.</p></article>
+        <article class="card"><div class="service-icon">🤝</div><h3>Customer Acquisition Support</h3><p>Identify potential customers and create practical ways to generate relevant business enquiries.</p></article>
       </div>
     </div>
   </section>
 
-
-
-  <section style="background:#fff">
-    <div class="container">
-      <div class="section-head">
-        <h2>How We Work</h2>
-        <p>A simple 4-step process for building your digital presence.</p>
+  <section class="soft" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span class="label">About us</span>
+        <h2>Growth Should Be Practical, Not Complicated.</h2>
+        <p>Digital Growth Hub is a digital marketing and business growth service designed for local businesses, early-stage startups and entrepreneurs who want to strengthen their online presence.</p>
+        <p>Our approach focuses on affordable solutions, consistent communication, customer feedback and clear reporting. We aim to make digital marketing easier to understand and more manageable for growing businesses.</p>
+        <ul class="checklist">
+          <li>Affordable service packages</li>
+          <li>Solutions shaped around business needs</li>
+          <li>Customer feedback and retention focus</li>
+          <li>Monthly performance reporting</li>
+        </ul>
       </div>
-      <div class="cards">
-        <div class="card"><div class="icon">1️⃣</div><h3>Understand</h3><p>We learn about your business, customers and goals.</p></div>
-        <div class="card"><div class="icon">2️⃣</div><h3>Plan</h3><p>We create a practical content and marketing plan.</p></div>
-        <div class="card"><div class="icon">3️⃣</div><h3>Create</h3><p>We prepare posts, reels and local marketing content.</p></div>
-        <div class="card"><div class="icon">4️⃣</div><h3>Measure</h3><p>We review performance and improve the strategy.</p></div>
+      <div class="approach">
+        <h3 style="color:#101a35;margin-bottom:8px">From idea to growth</h3>
+        <p style="color:#66708a;font-size:14px;margin-bottom:8px">A structured approach for small businesses and startups.</p>
+        <div class="approach-row"><span class="number">01</span><div><strong>Build your foundation</strong><p>Clarify your offer, brand message and target audience.</p></div></div>
+        <div class="approach-row"><span class="number">02</span><div><strong>Create your presence</strong><p>Establish useful digital channels and consistent content.</p></div></div>
+        <div class="approach-row"><span class="number">03</span><div><strong>Reach customers</strong><p>Use practical marketing to encourage relevant enquiries.</p></div></div>
+        <div class="approach-row"><span class="number">04</span><div><strong>Learn and improve</strong><p>Use feedback and reporting to guide next steps.</p></div></div>
       </div>
     </div>
   </section>
@@ -166,107 +268,158 @@
   <section id="pricing">
     <div class="container">
       <div class="section-head">
-        <h2>Simple Pricing</h2>
-        <p>Flexible packages for local businesses. Ad spend, if required, is separate.</p>
+        <span class="label">Simple pricing</span>
+        <h2>Choose the Right Growth Plan</h2>
+        <p>Clear starting packages for businesses at different stages. Final deliverables can be confirmed before the service begins.</p>
       </div>
-      <div class="cards">
-        <div class="card price-card">
-          <div class="icon">🟢</div>
+      <div class="grid pricing">
+        <article class="card price-card">
           <h3>Starter</h3>
-          <p style="font-size:30px;font-weight:800;color:#172033;margin:12px 0">₹1,999<span style="font-size:14px;font-weight:500;color:#697386">/month</span></p>
-          <p>8 social media posts<br>Captions & hashtags<br>Basic page management<br>Monthly report</p>
-        </div>
-        <div class="card price-card" style="border:2px solid #2563eb">
-          <div class="popular">MOST POPULAR</div><div class="icon">🔵</div>
+          <p>For businesses beginning their social media journey.</p>
+          <div class="price">₹499 <small>/ month</small></div>
+          <ul class="features">
+            <li>8 social media posts</li>
+            <li>Captions and hashtags</li>
+            <li>Basic page management</li>
+            <li>Monthly performance report</li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-plan="Starter">Choose Starter</a>
+        </article>
+        <article class="card price-card featured">
+          <span class="popular">POPULAR</span>
           <h3>Growth</h3>
-          <p style="font-size:30px;font-weight:800;color:#172033;margin:12px 0">₹3,999<span style="font-size:14px;font-weight:500;color:#697386">/month</span></p>
-          <p>12 posts + 4 reels<br>Instagram & Facebook management<br>Google Business optimization<br>Review strategy + report</p>
-        </div>
-        <div class="card price-card">
-          <div class="icon">🟣</div>
+          <p>For businesses ready to build a more active presence.</p>
+          <div class="price">₹999 <small>/ month</small></div>
+          <ul class="features">
+            <li>12 social media posts</li>
+            <li>4 reels</li>
+            <li>Instagram and Facebook management</li>
+            <li>Google Business optimisation support</li>
+            <li>Review strategy</li>
+            <li>Monthly report</li>
+          </ul>
+          <a class="btn" href="#contact" data-plan="Growth">Choose Growth</a>
+        </article>
+        <article class="card price-card">
           <h3>Premium</h3>
-          <p style="font-size:30px;font-weight:800;color:#172033;margin:12px 0">₹6,999<span style="font-size:14px;font-weight:500;color:#697386">/month</span></p>
-          <p>16 posts + 8 reels<br>Social media management<br>Google Business + local SEO<br>Feedback system + analytics</p>
-        </div>
+          <p>For businesses seeking broader marketing support.</p>
+          <div class="price">₹1,499 <small>/ month</small></div>
+          <ul class="features">
+            <li>16 social media posts</li>
+            <li>8 reels</li>
+            <li>Social media management</li>
+            <li>Google Business support</li>
+            <li>Local SEO support</li>
+            <li>Customer feedback system</li>
+            <li>Marketing analytics</li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-plan="Premium">Choose Premium</a>
+        </article>
       </div>
+      <p class="note">Advertising spend, if required, is separate from the monthly package fee. Confirm deliverables and terms before purchase.</p>
     </div>
   </section>
 
-  <section id="portfolio">
+  <section class="soft" id="portfolio">
     <div class="container">
       <div class="section-head">
-        <h2>Portfolio</h2>
-        <p>Sample campaigns created for demonstration. Real client projects will be added here.</p>
+        <span class="label">Our approach in action</span>
+        <h2>Solutions We Can Build</h2>
+        <p>Examples of project types Digital Growth Hub can develop for clients.</p>
       </div>
-      <div class="cards">
-        <div class="card"><div class="icon">☕</div><h3>Local Café Campaign</h3><p>Weekend offer, promotional post and social media content — Sample Project.</p></div>
-        <div class="card"><div class="icon">🎓</div><h3>Coaching Centre Campaign</h3><p>Admission promotion and social media content — Sample Project.</p></div>
-        <div class="card"><div class="icon">💇</div><h3>Salon Campaign</h3><p>Festival offer and promotional reel concept — Sample Project.</p></div>
+      <div class="grid">
+        <article class="portfolio-card"><span class="tag">Local business</span><h3>Local Visibility Starter</h3><p>A sample service concept combining social content, a Google Business profile review and a customer enquiry path.</p></article>
+        <article class="portfolio-card"><span class="tag">Customer experience</span><h3>Feedback Collection System</h3><p>A sample concept for collecting customer feedback, understanding common issues and improving service quality.</p></article>
+        <article class="portfolio-card"><span class="tag">New startup</span><h3>Startup Digital Launch</h3><p>A sample launch concept covering brand messaging, social media content and a simple digital enquiry page.</p></article>
       </div>
+      <p class="portfolio-note">These are illustrative service concepts, not claims of completed client projects. Add real work samples here as they become available.</p>
     </div>
   </section>
 
-  <section class="cta" id="contact">
+  <section class="cta">
+    <div class="container">
+      <span class="label" style="color:#aabaff">Ready to grow?</span>
+      <h2>Let's Build Your Digital Presence.</h2>
+      <p>Tell us about your business and your goals. We'll help you explore a practical starting point for your digital growth.</p>
+      <a class="btn" href="#contact">Discuss Your Business →</a>
+    </div>
+  </section>
+
+  <section id="contact">
     <div class="container">
       <div class="section-head">
-        <div class="mini-label">Let's Talk</div>
-        <h2>Start Growing Your Business</h2>
-        <p>Tell us what you need and we'll connect with you on WhatsApp.</p>
+        <span class="label">Contact us</span>
+        <h2>Let's Talk About Your Business</h2>
+        <p>Share a few details and start a conversation with Digital Growth Hub.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Digital Growth Hub</h3>
-          <p>Practical digital marketing support for local and growing businesses.</p>
-          <div class="contact-line">📱 <strong>WhatsApp:</strong> +91 62005 36558</div>
-          <div class="contact-line">🎯 <strong>Focus:</strong> Local Business Growth</div>
-          <div class="contact-line">📊 <strong>Approach:</strong> Content + Visibility + Analytics</div>
-          <a class="btn primary" href="https://wa.me/916200536558?text=Hello%20Digital%20Growth%20Hub%2C%20I%20would%20like%20a%20free%20marketing%20consultation." target="_blank" style="margin-top:20px">Chat on WhatsApp</a>
+          <h3>Get in touch</h3>
+          <p>Have a question about our services or packages? Contact us to discuss your needs.</p>
+          <div class="contact-item"><small>WhatsApp</small><a href="https://wa.me/916200536558" target="_blank" rel="noopener">+91 62005 36558</a></div>
+          <div class="contact-item"><small>Email</small><a href="mailto:digitalgrowthhub80@gmail.com">digitalgrowthhub80@gmail.com</a></div>
+          <div class="contact-item"><small>Service focus</small><span>Local businesses, startups and entrepreneurs</span></div>
+          <a class="btn" style="background:#16a36a;margin-top:10px" href="https://wa.me/916200536558" target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
-        <div class="contact-form">
-          <form onsubmit="sendToWhatsApp(event)">
-            <input id="name" required placeholder="Your Name">
-            <input id="business" required placeholder="Business Name">
-            <input id="phone" required placeholder="Your Phone / WhatsApp Number">
-            <select id="service">
-              <option>Social Media Management</option>
-              <option>Content Creation</option>
-              <option>Google Business</option>
-              <option>Marketing Analytics</option>
-              <option>Customer Feedback</option>
-              <option>Local Marketing</option>
+        <form id="enquiryForm">
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div>
+          <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Your business or brand"></div>
+          <div class="field"><label for="service">Service you're interested in *</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Social Media Management</option><option>Content Creation</option>
+              <option>Google Business Support</option><option>Local Digital Marketing</option>
+              <option>Customer Feedback & Reviews</option><option>Website & Landing Pages</option>
+              <option>Startup Launch Support</option><option>Marketing Analytics</option>
+              <option>Starter Package - ₹499</option><option>Growth Package - ₹999</option>
+              <option>Premium Package - ₹1,499</option><option>Other / Not Sure Yet</option>
             </select>
-            <textarea id="message" placeholder="Tell us briefly about your requirement"></textarea>
-            <button class="btn primary" type="submit" style="cursor:pointer">Request Free Consultation</button>
-            <div class="small-note">Your enquiry will open directly in WhatsApp.</div>
-          </form>
-        </div>
+          </div>
+          <div class="field"><label for="message">Tell us about your needs</label><textarea id="message" name="message" placeholder="What would you like help with?"></textarea></div>
+          <button class="btn" type="submit">Send Enquiry via WhatsApp →</button>
+          <p style="font-size:12px;color:#66708a;margin-top:12px">Your details will be placed in a WhatsApp message for you to review and send. This form does not store submissions.</p>
+        </form>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <div><strong>Digital Growth Hub</strong><br>Helping Local Businesses Grow Digitally.</div>
-    <div>© 2026 Digital Growth Hub. All rights reserved.</div>
+  <div class="container footer-row">
+    <div><strong>Digital Growth Hub</strong><br>Practical marketing. Sustainable growth.</div>
+    <div>© <span id="year"></span> Digital Growth Hub. All rights reserved.</div>
   </div>
 </footer>
 
-
-<a href="https://wa.me/916200536558?text=Hello%20Digital%20Growth%20Hub%2C%20I%20would%20like%20a%20free%20marketing%20consultation." target="_blank" aria-label="WhatsApp" style="position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#16a34a;color:white;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 8px 25px rgba(0,0,0,.18);z-index:20">✆</a>
-
 <script>
-function sendToWhatsApp(event){
-  event.preventDefault();
-  const name = document.getElementById('name').value;
-  const business = document.getElementById('business').value;
-  const phone = document.getElementById('phone').value;
-  const service = document.getElementById('service').value;
-  const requirement = document.getElementById('message').value;
-  const message = `Hello Digital Growth Hub!%0A%0AName: ${encodeURIComponent(name)}%0ABusiness: ${encodeURIComponent(business)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ARequirement: ${encodeURIComponent(requirement)}%0A%0AI would like a free consultation.`;
-  window.open(`https://wa.me/916200536558?text=${message}`, '_blank');
-}
-</script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
+  document.querySelectorAll("[data-plan]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var plan = link.getAttribute("data-plan");
+      var service = document.getElementById("service");
+      var option = Array.from(service.options).find(function (item) {
+        return item.textContent.toLowerCase().includes(plan.toLowerCase() + " package");
+      });
+      if (option) service.value = option.value;
+    });
+  });
+
+  document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = document.getElementById("name").value.trim();
+    var business = document.getElementById("business").value.trim();
+    var service = document.getElementById("service").value;
+    var message = document.getElementById("message").value.trim();
+
+    var text = "Hello Digital Growth Hub!%0A%0A"
+      + "My name: " + encodeURIComponent(name) + "%0A"
+      + "Business: " + encodeURIComponent(business || "Not provided") + "%0A"
+      + "Interested in: " + encodeURIComponent(service) + "%0A"
+      + "Message: " + encodeURIComponent(message || "I would like to know more.");
+
+    window.open("https://wa.me/916200536558?text=" + text, "_blank", "noopener");
+  });
+</script>
 </body>
 </html>
